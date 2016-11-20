@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI</title>
+	<script type="text/javascript" src="ui.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		UI
+			.waitForElement('.form')
+			.ifAttributeContains('.form', 'className', 'login')
+				.setValue('[name=userName]', 'testUser')
+				.setValue('[name=password]', 'passwd')
+				.ifAttributeContains('asda','asdas','asdasd')
+					.click('.dfdsf')
+				.endIf()	
+				.click('button.submit')
+			.endIf()
+			.ifAttributeContains('.form', 'className', 'register')
+				.click('span.fn-register')
+			.endIf()
+			.waitForElement('.popup')
+			.click('.close-popup');
+
+	</script>
+</body>
+</html>
