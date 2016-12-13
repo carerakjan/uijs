@@ -10,19 +10,20 @@
 		
 		UI
 			.waitForElement('.form')
-			.ifAttributeContains('.form', 'className', 'login')
+			.ifAttributeContains('.form', 'className', 'login', true)
 				.setValue('[name=userName]', 'testUser')
 				.setValue('[name=password]', 'passwd')
-				.ifAttributeContains('asda','asdas','asdasd')
+				.ifAttributeContains('asda','asdas','asdasd', true)
 					.click('.dfdsf')
-				.endIf()	
+				.endIf()
 				.click('button.submit')
 			.endIf()
-			.ifAttributeContains('.form', 'className', 'register')
+			.ifAttributeContains('.form', 'className', 'register', true)
 				.click('span.fn-register')
 			.endIf()
 			.waitForElement('.popup')
-			.click('.close-popup');
+			.click('.close-popup')
+			.end();
 
 	</script>
 </body>
